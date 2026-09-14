@@ -46,7 +46,7 @@ function insert(Request $request)
 }
 function delete($id){
     Blog::find($id)->delete();
-    return redirect('/author/blogs');   
+    return redirect('/author/blogs');
 }
 function change($id){
     $blog = Blog::find($id);
@@ -76,6 +76,6 @@ function update(Request $request,$id)
     "content" => $request->content,
  ];
     Blog::find($id)->update($data);
-    return redirect('/blogs');
+    return redirect('/author/blogs');
 }
 }
